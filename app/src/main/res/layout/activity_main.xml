@@ -1,33 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.azb.curiosity.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/home"
+        android:scaleType = "centerCrop">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="50dp"/>
 
-    </android.support.design.widget.AppBarLayout>
+        <Button
+            android:id="@+id/btn_fb"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/fb"
+            android:backgroundTint="#3b5998"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:text="Sign In with Facebook"/>
+        <Button
+            android:id="@+id/btn_g"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/g2"
+            android:backgroundTint="#5286ec"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:text="Sign In with Google" />
 
-    <include layout="@layout/content_main" />
+        <Button
+            android:id="@+id/btn_t"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/t"
+            android:layout_gravity="center"
+            android:backgroundTint="#0084b4"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:text="Sign In with Twitter" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <Button
+            android:id="@+id/btn_email_signup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/email"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:text="Sign Up with Email" />
+
+        <Button
+            android:id="@+id/btn_email_in"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/email"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            android:drawablePadding="10dp"
+            android:text="Sign In with Email" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="Terms &amp; Conditions and Privacy Policy"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>
