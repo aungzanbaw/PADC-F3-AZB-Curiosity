@@ -1,88 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.azb.curiosity.MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/home"
-        android:scaleType = "centerCrop">
+    android:background="@drawable/home"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/logo"
-            android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            android:layout_marginBottom="50dp"/>
+            android:layout_marginBottom="150dp"/>
 
         <Button
-            android:id="@+id/btn_fb"
-            android:layout_width="250dp"
+            android:id="@+id/btn_facebook"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/fb"
             android:backgroundTint="#3b5998"
+            android:textColor="#fff"
             android:drawablePadding="10dp"
             android:padding="15dp"
-            android:layout_gravity="center"
-            android:text="Sign In with Facebook"/>
+            android:layout_below="@+id/logo"
+            android:text="Sign In With Facebook"
+            android:textAllCaps="false"/>
         <Button
-            android:id="@+id/btn_g"
-            android:layout_width="250dp"
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/g2"
             android:backgroundTint="#5286ec"
+            android:textColor="#fff"
             android:drawablePadding="10dp"
             android:padding="15dp"
-            android:layout_gravity="center"
-            android:text="Sign In with Google" />
+            android:layout_below="@+id/btn_facebook"
+            android:text="Sign In With Google"
+            android:textAllCaps="false"/>
 
         <Button
-            android:id="@+id/btn_t"
-            android:layout_width="250dp"
+            android:id="@+id/btn_twitter"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/t"
-            android:layout_gravity="center"
+            android:layout_below="@+id/btn_google"
             android:backgroundTint="#0084b4"
+            android:textColor="#fff"
             android:drawablePadding="10dp"
             android:padding="15dp"
-            android:text="Sign In with Twitter" />
+            android:text="Sign In With Twitter"
+            android:textAllCaps="false"/>
 
-
-        <Button
-            android:id="@+id/btn_email_signup"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/email"
-            android:layout_gravity="center"
-            android:drawablePadding="10dp"
-            android:text="Sign Up with Email" />
-
-        <Button
-            android:id="@+id/btn_email_in"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/email"
-            android:layout_gravity="center"
-            android:layout_marginBottom="100dp"
-            android:drawablePadding="10dp"
-            android:text="Sign In with Email" />
-
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/ll_email_btns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff"
+            android:orientation="horizontal"
+            android:layout_below="@+id/btn_twitter"
+            android:scaleType = "centerCrop">
+
+            <Button
+                android:id="@+id/btn_email_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#727f88"
+                android:textColor="#fff"
+                android:text="Sign Up With Email"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_email_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                android:backgroundTint="#727f88"
+                android:textColor="#fff"
+                android:text="Sign In With Email"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ccc"
             android:text="Terms &amp; Conditions and Privacy Policy"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
             android:layout_gravity="center"/>
 
-    </LinearLayout>
-
-
-
-
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
